@@ -176,4 +176,4 @@ three tasks in it are currently failing.
 This is the end of the introduction lesson. The next one will be your first step into writing code,
 and deals with **value types**, the basics of **functions** and the **return** statement.
 
-[Chapter 1, bridge control](BRIDGE_CONTROL.md "Chapter 1 - Bridge Control").
+[Chapter 1, bridge control](BRIDGE_CONTROL "Chapter 1 - Bridge Control").

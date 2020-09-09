@@ -19,8 +19,8 @@ This is the a repository of narrated coding problem in JavaScript, targeted at b
 engineers. It is intended to be accompanied by the story, instructions and guidance you will find
 on the following pages:
 
-[Introduction](INTRODUCTION.md "Introduction - setting up the code base")
+[Introduction](INTRODUCTION "Introduction - setting up the code base")
 
-[Bridge Control](BRIDGE_CONTROL.md "Bridge Control - variable types and the return statement")
+[Bridge Control](BRIDGE_CONTROL "Bridge Control - variable types and the return statement")
 
-[Life Support](LIFE_SUPPORT.md "Life Support - functions, parameters, variables")
+[Life Support](LIFE_SUPPORT "Life Support - functions, parameters, variables")
