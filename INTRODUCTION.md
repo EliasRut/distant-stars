@@ -39,7 +39,7 @@ code .
 To see the current state of your ship's computer system, you can make use the **start** script 
 defined in the repositories package.json file. This script uses the **node** command to start up
 the mainframe and run the system diagnostics test, and reads as follows:
-```json
+```
   "scripts": {
     "start": "node src/coreSystems/mainframe.js && node src/coreSystems/systemControlIntegration.js"
   },
@@ -118,7 +118,7 @@ Starting mainframe....
 Loading system control software...
 
 
-/home/elias/Code/space-ranger/src/lifeSupport.js:16
+path/to/your/code/folder/src/lifeSupport.js:16
 }
 ^
 
@@ -130,7 +130,7 @@ SyntaxError: Unexpected end of input
     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
     at Module.require (internal/modules/cjs/loader.js:690:17)
     at require (internal/modules/cjs/helpers.js:25:18)
-    at Object.<anonymous> (/home/elias/Code/space-ranger/src/coreSystems/systemControlIntegration.js:2:85)
+    at Object.<anonymous> (/path/to/your/code/folder/src/coreSystems/systemControlIntegration.js:2:85)
     at Module._compile (internal/modules/cjs/loader.js:776:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
 npm ERR! code ELIFECYCLE
@@ -143,7 +143,7 @@ npm ERR! This is probably not a problem with npm. There is likely additional log
 npm WARN Local package.json exists, but node_modules missing, did you mean to install?
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/elias/.npm/_logs/2020-09-09T20_51_58_806Z-debug.log
+npm ERR!     /home/yourUser/.npm/_logs/2020-09-09T20_51_58_806Z-debug.log
 ```
 
 If there is no error, you will see the line 
