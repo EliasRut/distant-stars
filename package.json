@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node src/coreSystems/mainframe.js && node src/coreSystems/systemControlIntegration.js"
+  },
+  "name": "space-ranger",
+  "version": "1.0.0",
+  "description": "An interactive, game style tutorial into JavaScript.",
+  "main": "src/coreSystems.js",
+  "author": "Elias Rut <eli4srut@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
