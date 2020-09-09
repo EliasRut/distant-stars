@@ -20,5 +20,7 @@ engineers. It is intended to be accompanied by the story, instructions and guida
 on the following pages:
 
 [Introduction](INTRODUCTION.md "Introduction - setting up the code base")
+
 [Bridge Control](BRIDGE_CONTROL.md "Bridge Control - variable types and the return statement")
+
 [Life Support](LIFE_SUPPORT.md "Life Support - functions, parameters, variables")
