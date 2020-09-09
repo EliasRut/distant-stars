@@ -118,15 +118,19 @@ const deflectorShieldStatus = areDeflectorShieldsOnline ? 'online' : 'offline';
 const areTargetingSystemsOnline = false;
 const targetingSystemStatus = areTargetingSystemsOnline ? 'online' : 'offline';
 
+
+
 const seperatorLine = '===========================================================';
+console.log('System control software loaded.')
+console.log('Running system diagnostics...\n')
 
 console.log(seperatorLine);
 console.log('  Main system check');
 console.log(seperatorLine);
+// Introduction session
 console.log(`  Main computer systems...................... online`);
-console.log(`  Backup power systems....................... online`);
 // First session
-console.log(`  Bridge systems............................. ${bridgeSystemStatus}`)
+console.log(`  Bridge control systems..................... ${bridgeSystemStatus}`)
 console.log(`  Life support............................... ${lifeSupportStatus}`);
 // Second session
 console.log(`  Main Reactor............................... ${mainReactorStatus}`);
@@ -143,7 +147,7 @@ console.log(seperatorLine);
 console.log('  Starting failed subsytem trace');
 
 if (!areBridgeSystemsOnline) {
-	console.log('  Tracing bridge systems');
+	console.log('  Tracing bridge control systems');
 	console.log(seperatorLine);
 	console.log(`  Critical system access..................... ${hasSystemControl ? 'granted' : 'denied'}`);
 	console.log(`  Telemetry data............................. ${isStarSystemCorrect ? 'found' : 'missing'}`);
@@ -166,7 +170,9 @@ else if (!isLifeSupportOnline) {
 	}
 }
 else if (!isMainReactorOnline) {
-
+	console.log('  Tracing main reactor components');
+	console.log(seperatorLine);
+	console.log('    Error: Main reactor components not yet ready for debugging');
 }
 else if (!areThrusterOnline) {
 

@@ -1,10 +1,10 @@
 const calculatePowerRequirements = (lighting, heating, airflow) => {
 };
 
-const keepSubSystemOnline = (isCriticalSystem, hasHighEnergyRequirements) => {
+const keepSubSystemOnline = (isCriticalSystem, hasHighEnergyDraw) => {
 };
 
-const getTemperatureWithUnit = (temperatureinKelvin) => {
+const getTemperatureWithUnit = (temperatureInKelvin) => {
 };
 
 module.exports = {
