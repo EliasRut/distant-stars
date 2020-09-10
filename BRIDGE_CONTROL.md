@@ -18,7 +18,7 @@ src/brigeControl.js
 Go on and open it up in your editor.
 
 ## Challenges
-As you start up your display on your bridge computer, you are swarmed with a serious of error
+As you start up your display on your bridge computer, you are swarmed with a series of error
 messages. It seems that the computer is now effectively denying you access to any of the main
 systems!
 
@@ -40,8 +40,8 @@ const allowMainSystemControl = () => {
 ```
 
 This function was supposed to return a **boolean value** stating whether or not the current user
-should have access right to the main systems. But since it's just you on board, you can just fix
-this for now by just always granting access. To do that, let the function return **true**.
+should have access rights to the main systems. But since it's just you on board, you can fix
+this for now by simply always granting access. To do that, let the function return **true**.
 
 ## Fix telemetry data
 Find the function called **getStarSystemName**. It should look like this:
