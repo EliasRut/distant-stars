@@ -87,5 +87,7 @@ and show the subsystem trace for the next main system to fix, the main reactor:
 ```
 
 ## Next steps
-This is the end of the life support lesson. The next lesson is still in preparation and will come
-online on 2020-09-17.
+This is the end of the introduction lesson. The next one will combine most things you have learned
+so far, including **functions** and **if** and **if ... else** statements and the **Math** library.
+
+[Chapter 3, main reactor](MAIN_REACTOR "Chapter 3 - Main Reactor").

@@ -24,3 +24,5 @@ on the following pages:
 [Bridge Control](BRIDGE_CONTROL "Bridge Control - variable types and the return statement")
 
 [Life Support](LIFE_SUPPORT "Life Support - functions, parameters, variables")
+
+[Main Reactor](MAIN_REACTOR "Main Reactor - functions cont'd, conditional statements, Math library")
