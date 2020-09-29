@@ -8,14 +8,14 @@ const {
 	subSystemsEvaluations,
 	areTemperaturesCorrect,
 	temperatureEvaluations,
-	// isLifeSupportOnline
+	isLifeSupportOnline
 } = require("./lifeSupportTests");
 
 const {
 	hasSystemControl,
 	isStarSystemCorrect,
 	isCurrentStarYearCorrect,
-	// areBridgeSystemsOnline
+	areBridgeSystemsOnline
 } = require("./bridgeSystemTests");
 
 const {
@@ -29,9 +29,6 @@ const {
 	arePowerAdjustmentEvaluationsCorrect,
 	isMainReactorOnline
 } = require("./mainReactorTests");
-
-const areBridgeSystemsOnline = true;
-const isLifeSupportOnline = true;
 
 const bridgeSystemStatus = areBridgeSystemsOnline ? 'online' : 'offline';
 const lifeSupportStatus = isLifeSupportOnline ? 'online' : 'offline';
