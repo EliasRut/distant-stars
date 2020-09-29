@@ -41,9 +41,9 @@ heating and airflow accordingly.
 
 Hint: Short code is not always good code. In most cases, an explicit statement of what your code is
 supposed to be doing helps with **code readability**, so how easy it is to read your solution. One
-way of improving readability is giving clear names to calculation steps and sums. As an exercise,
-define a constant with a fitting name inside of the **calculatePowerRequirements** function, and
-assign it the value of your calculation. Then, return that constant.
+way of improving readability is giving clear names to calculation steps and sums. As part of the
+exercise, define a constant with a fitting name inside of the **calculatePowerRequirements** 
+function, and assign it the value of your calculation. Then, return that constant.
 
 Hint Hint: Most of the JavaScript world has agreed on camelCase for variable names - that is, a
 **lower case letter** at the beginning, with an **upper case letter for additional words**.
@@ -68,10 +68,10 @@ Luckily, you remember that the conversion was x°K = (x - 273.15)°C.
 To fix the problem, implement the **getTemperatureWithUnit** function. It only has one parameter,
 **temperatureInKelvin**, which is numeric.
 
-What it expects as output is a string of the form "28°C" - so a number, followed by °C.
+What it expects as output is a **string** of the form "28°C" - so a number, followed by °C.
 
 This function will be run with multiple operating temperatures in Kelvin, if all of them return
-the correct string with degrees Celsius, the problem is fixed.
+the correct string in degrees Celsius, the problem is fixed.
 
 ## Testing your progress
 Once all the tasks in this lesson are done, your system should display:

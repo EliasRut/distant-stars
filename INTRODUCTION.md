@@ -6,16 +6,20 @@ to handle the challenges of the story. This will consist of two steps:
 2. Booting up the ship's computer core (aka, running the source code)
 
 ## Loading your computers state
-Since your ship's computer runs on good old git, the easiest way to get your computer source code
-into Visual Studio Code is to just clone the git repository. To do that, let's start by opening a
-terminal.
+Since your ship's computer runs on good old Git, the easiest way to get your computer source code
+into Visual Studio Code is to just clone the Git repository. 
 
-Once you've got that open, navigate to the directory where you want to copy the source code folder
-into by using:
+You will be navigating in the terminal by using the **cd** command, which stands for
+**c**hange **d**irectory.
+
+To do that, let's start by opening a terminal. Once you've got that open, navigate to the directory
+where you want to copy the source code folder into by using
 ```
 cd path/to/your/code/folder
 ```
-where **path/to/your/code/folder** is the path to the folder you want to have the source code in.
+where **path/to/your/code/folder** is the path to a folder of your choosing. Having all your code in
+one root folder is recommended, and keep in mind that git clone will create a new folder within
+your chosen folder.
 You can also use
 ```
 cd ..
@@ -24,28 +28,34 @@ to change back to the parent directory. Finally, if you want to create a new fol
 ```
 mkdir folderName
 ```
+**mkdir** is a unix command that stands for **m**a**k**e **dir**ectory.
+
 Once you are where you want to be, you can start the code download by executing
 ```
 git clone https://github.com/EliasRut/distant-stars.git
 ```
-which will pull the latest version of the master branch into a new distant-stars folder. Now all you
-need to do is to navigate into that new folder, and open your code editor. You can do this by 
-executing the following in your terminal:
+which will pull the latest version of the master branch into a newly created distant-stars folder.
+Now all you need to do is to navigate into that new folder, and open your code editor. Of course you
+will use the one and only code editor that is fully endorsed and recommended by Space Academy, 
+Visual Studio Code. You can do this by executing the following in your terminal
 ```
 cd distant-stars
 code .
 ```
+**code** is the command to open Visual Studio Code from your terminal, and the **.** will set the
+open working directory to be the directory you are currently in.
+
 ## Booting up your systems
-To see the current state of your ship's computer system, you can make use the **start** script 
+To see the current state of your ship's computer system, you can use the **start** script 
 defined in the repositories package.json file. This script uses the **node** command to start up
-the mainframe and run the system diagnostics test, and reads as follows:
+the mainframe and run the system diagnostics test, and reads as follows
 ```
   "scripts": {
     "start": "node src/coreSystems/mainframe.js && node src/coreSystems/systemControlIntegration.js"
   },
 ```
 
-To run this script, we can make use of the node package manager, that know about everything 
+To run this script, we can make use of the node package manager, that knows about everything 
 happening in the package.json file. Node package manager, or **npm** for short, is a set of tools
 for dealing with JavaScript projects, from handling dependencies to setting up new projects and
 running node scripts. The **npm run scriptName** command can be used to start any scripts defined
@@ -56,7 +66,7 @@ Let's get started by running
 npm run start
 ```
 
-This should produce an output similar to this one:
+This should produce an output similar to this one
 ```
                      `. ___
                     __,' __`.                _..----....____
@@ -111,7 +121,7 @@ get to the line stating
 Loading system control software...
 ```
 If you produced an error that stops node from even running your code, you will now see an error
-message followed by what is called a stack trace, listing where your error is. Something like this:
+message followed by what is called a stack trace, listing where your error is. Something like this
 ```
 Starting mainframe....
 -> Mainframe systems loaded.
