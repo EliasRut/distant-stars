@@ -41,26 +41,24 @@ where the simulations will come in handy.
 ## Calculate the total power output
 Find the function **getTotalPowerOutput**. It does not take any parameters. Instead, it's intended
 to gain all values it needs from two functions in the coreSystem/reactorControl code. These are
-already written functions that you can simply call from withing getTotalPowerOutput.
+already written functions that you can simply call from withing **getTotalPowerOutput**.
 
 The two functions are **getMainReactorOutput** and **getBackupReactorOutput**. Both do not take any
 parameters. Your function should **return** the sum of the return values of these two functions.
 
 Explanation: These functions return global states that are set in the testing procedure. So, before
-the testing scripts call getTotalPowerOutput\(\), they update an internal state. Whenever you call
-getMainReactorOutput\(\) or getBackupReactorOutput\(\), this internal state is then returned. All
-functions you have to write in this session use this kind of logic.
+the testing scripts call **getTotalPowerOutput\(\)**, they update an internal state. Whenever you
+call **getMainReactorOutput\(\)** or **getBackupReactorOutput\(\)**, this internal state is then
+returned. All functions you have to write in this session use this kind of logic.
 
 ## Establish whether the power output is within tolerance
 After having written the calculation logic for the total power output, you read over the technical
 definitions of your reactors.
 
-Your backup reactor can produce between 0 and 10 power, and is never critical.
-
-Your main reactor can produce between 0 and 50 power, and goes critical whenever it produces more
-power than is drawn from your ship systems.
-
-Ship systems always draw from the main reactor first, and only then from the backup reactor.
+* Your backup ractor can produce between 0 and 10 power, and is never critical.
+* Your main reactor can produce between 0 and 50 power, and goes critical whenever it produces more
+  power than is drawn from your ship systems.
+* Ship systems always draw from the main reactor first, and only then from the backup reactor.
 
 You can get the current power draw of your ship systems from another function in the
 coreSystems/reactorControl scripts. This one is called **getPowerDraw**, takes no parameters and
@@ -69,20 +67,20 @@ returns the current power draw as a numeric value.
 Complete the function **isPowerOutputInTolerance**. It takes no parameters and returns a boolean
 value: true if the current power output is okay, false if the current power output is critical.
 
-Examples: Assuming a main reactor output of 20 and a backup reactor output of 5:
+**Examples**: Assuming a main reactor output of 20 and a backup reactor output of 5:
 * For a power draw of 25, your function should return **true**.
-  * All power produced is used, so the main reactor is not critical.
+ * All power produced is used, so the main reactor is not critical.
 * For a power draw of 30, your function should return **true**.
-  * All power produced is used, so the main reactor is not critical. 5 power less than required
-    from ship systems is produced, which means not everything will be running, but the reactor is
-    fine.
+ * All power produced is used, so the main reactor is not critical. 5 power less than required
+   from ship systems is produced, which means not everything will be running, but the reactor is
+   fine.
 * For a power draw of 20, your function should return **true**.
-  * Not all power produced is used. But the power from the main reactor is used first, so all 20
-    power from the main reactor is drawn. The 5 extra power from the backup reactor are not used,
-    but the backup reactor never goes critical, so all is good.
+ * Not all power produced is used. But the power from the main reactor is used first, so all 20
+   power from the main reactor is drawn. The 5 extra power from the backup reactor are not used,
+   but the backup reactor never goes critical, so all is good.
 * For a power draw of 18, your function should return **false**.
-  * Not all power produced is used, and not even all 20 power that the main reactor produces is 
-    used. This will cause the main reactor to go critical. 
+ * Not all power produced is used, and not even all 20 power that the main reactor produces is 
+   used. This will cause the main reactor to go critical. 
 
 ## Shut down the main reactor if necessary
 Now that you have a test for whether the power output is within tolerance, you can make use of that
@@ -128,7 +126,7 @@ will be changing between calls to **adjustReactorSystems** and which you can get
 *change between -10 and +10* rule. Finally, don't forget to shut down the reactor if it becomes
 necessary - you should be able to reuse your **performEmergencyShutdownIfNecessary** function.
 
-Explanation: The testing scripts contain two simulations, *Simulation 1: Interplanetary flight* and
+**Explanation**: The testing scripts contain two simulations, *Simulation 1: Interplanetary flight* and
 *Simulation 2: Emergency shutdown after flare*, that your function implementaiton needs to be able
 to handle. These simulations start off by setting values for the starting output of the main and
 backup reactor as well as the current power draw, and then go through a series of steps where they
@@ -141,15 +139,15 @@ In other words, the global state of the reactor and ship systems is going to cha
 to **adjustReactorSystems**, so you'll need to read that state, calculate the correct power 
 settings, and set them via **adjustMainReactorOutput** and **adjustBackupReactorOutput**.
 
-Hint: This is by far the trickiest problem you have encountered in this course so far. Feel extra
+**Hint**: This is by far the trickiest problem you have encountered in this course so far. Feel extra
 free to ask for help. The intention of this problem is to tie everything you have learned so far
 together, and to really write some clever code. It's fine if it takes you a while, but don't wait
 to get help until you're frustrated.
 
-Hint hint: The **Math.min** and **Math.max** functions could be very useful here.
+**Hint Hint**: The **Math.min** and **Math.max** functions could be very useful here.
 
-Hint hint hint: If you finished the example, you can change **runAdvancedSimulations** to true to 
-see if your reactor script can also handle the *Simulation 3: Highly dynamic power draw* and 
+**Hint Hint Hint**: If you finished the example, you can change **runAdvancedSimulations** to true
+to see if your reactor script can also handle the *Simulation 3: Highly dynamic power draw* and 
 *Simulation 4: Full utilization* tests.
 
 ## Next steps
