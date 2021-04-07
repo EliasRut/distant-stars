@@ -105,7 +105,8 @@ write down these rules for your program:
 * The main reactor can produce between 0 and 50 power.
 * The backup reactor can produce between 0 and 10 power.
 * All power from the main reactor must be used, or it needs to perform an emergency shutdown.
-* The main reactor output can only change between -10 to +10 in one step.
+* The main reactor output can only change between -10 to +10  in one step. In other words, two
+  consecutive settings can never have a larger difference than 10.
 * The backup reactor can always be set to any number between 0 and 10.
 * If possible, all power needed by the ship systems should also be provided.
 
