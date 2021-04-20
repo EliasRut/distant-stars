@@ -152,7 +152,6 @@ const powerAdjustmentEvaluations = powerAdjustmentTests
 	})
 	.map((simulation) => {
 	restartReactor();
-	resetCounts();
 	setMainReactorOutput(simulation[1]);
 	setBackupReactorOutput(simulation[2]);
 	setPowerDraw(simulation[3]);
@@ -160,6 +159,7 @@ const powerAdjustmentEvaluations = powerAdjustmentTests
 	const steps = simulation[5];
 	const stepEvaluations = steps.map((step) => {
 		const [stepName, nextPowerDraw, expectReactorToBeRunning] = step;
+		resetCounts();
 		setPowerDraw(nextPowerDraw);
 		adjustReactorSystems();
 		const totalOutput = getTotalPowerOutput();
