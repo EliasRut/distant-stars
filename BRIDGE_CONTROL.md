@@ -13,7 +13,7 @@ To do that, you will need to
 ## Finding the source code
 The JavaScript filepath for this lesson is 
 ```
-src/brigeControl.js
+src/bridgeControl.js
 ```
 Go on and open it up in your editor.
 
@@ -22,7 +22,7 @@ As you start up your display on your bridge computer, you are swarmed with a ser
 messages. It seems that the computer is now effectively denying you access to any of the main
 systems!
 
-Not only that, but the name of the system you are currently in reads as undefined - 
+Not only that, but the name of the starsystem you are currently in reads as undefined - 
 that can't be right.
 
 The computer also seems to have forgotten what year it is, and unhelpfully shows that your 
@@ -52,14 +52,14 @@ const getStarSystemName = () => {
 ```
 
 This used to do a lookup on the interstaller star charts, but that's broken right now. Luckily, you
-know that you are in the Simia Prime, so for now we can fix the error by implementing code that
-returns the correct star system name.
+know that you are in the Simia Prime system, so for now we can fix the error by implementing code
+that just always returns that name.
 
 ## Synchronize ship clocks
 It seems the internal ship clocks have partially been disturbed by the solar flare. Date and time
 is still correct, but for some reason, your computer no longer knows what year it is!
 
-Good thing your memory wasn't wiped, so all you need to do is set the return of the 
+Good thing **your** memory wasn't wiped, so all you need to do is set the return of the 
 **getCurrentYear** function to be, well, the current year - which of course is 2722. The function
 looks like this, before your changes:
 ```

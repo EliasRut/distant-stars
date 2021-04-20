@@ -53,6 +53,7 @@ const adjustMainReactorOutput = (newValue) => {
 		throw new Error('Second call to adjustMainReactorOutput. ' + 
 			'Only one adjustment per situation change is possible.')
 	}
+	_adjustMainReactorCalls++;
 	if (newValue < 0) {
 		throw new Error('Can not set main reactor output below 0.');
 	}
@@ -71,10 +72,11 @@ const adjustBackupReactorOutput = (newValue) => {
 		throw new Error('Second call to adjustBackupReactorOutput. ' + 
 			'Only one adjustment per situation change is possible.')
 	}
+	_adjustBackupReactorCalls++;
 	if (newValue < 0) {
 		throw new Error('Can not set test reactor output below 0.');
 	}
-	if (newValue > 50) {
+	if (newValue > 10) {
 		throw new Error('Can not set test reactor output above 10.');
 	}
 	_backupReactorOutput = newValue;
